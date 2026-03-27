@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Almacenes Ariztor — Elegancia, exclusividad y distinción en ropa y accesorios para hombre. Bogotá, Colombia." />
+  <title>Almacenes Ariztor | Moda Masculina · Bogotá</title>
+  <link rel="icon" type="image/png" href="assets/Ariztor Icon Black.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Brand palette — executive dark + warm gold */
+      --ink:        #151210;
+      --charcoal:   #1E1B17;
+      --warm-dark:  #2A2420;
+      --gold:       #C4913A;
+      --gold-light: #D4A84B;
+      --gold-pale:  #F0DEB4;
+      --cream:      #F5F1EB;
+      --off-white:  #FAF8F5;
+      --gray-mid:   #6B6259;
+      --gray-light: #C9C3BB;
+      --white:      #FFFFFF;
+
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Montserrat', Arial, sans-serif;
+
+      --max-w: 1140px;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--off-white);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a  { color: inherit; text-decoration: none; }
+
+    /* ─── UTILITY ─────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .label {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .heading {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: .5px;
+    }
+
+    .subheading {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gray-mid);
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 34px;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .22s ease;
+      border: none;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--ink);
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,.4);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .btn-ghost-dark {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+    .btn-ghost-dark:hover { background: var(--ink); color: var(--cream); }
+
+    /* ─── TOPBAR ───────────────────────────────────── */
+    .topbar {
+      background: var(--ink);
+      color: var(--gray-light);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding: 9px 20px;
+    }
+
+    .topbar span { color: var(--gold); margin: 0 6px; }
+
+    /* ─── NAV ──────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(196,145,58,.18);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      position: relative;
+      padding-bottom: 3px;
+      transition: color .2s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width .25s ease;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      transition: .3s;
+    }
+
+    /* ─── HERO ──────────────────────────────────────── */
+    #inicio {
+      min-height: calc(100vh - var(--nav-h));
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Geometric decorative lines */
+    #inicio::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 600px; height: 600px;
+      border: 1px solid rgba(196,145,58,.08);
+      border-radius: 50%;
+    }
+    #inicio::after {
+      content: '';
+      position: absolute;
+      bottom: -120px; left: -120px;
+      width: 500px; height: 500px;
+      border: 1px solid rgba(196,145,58,.06);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      padding: 80px 0;
+    }
+
+    .hero-text { }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 30px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      line-height: .95;
+      margin-bottom: 10px;
+    }
+
+    .hero-title .gold { color: var(--gold); }
+
+    .hero-sub {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-style: italic;
+      color: var(--gray-light);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero visual panel */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(196,145,58,.15);
+      aspect-ratio: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(21,18,16,.9) 30%, transparent 70%);
+    }
+
+    .hero-card-img {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      opacity: .08;
+    }
+
+    .hero-card-content { position: relative; }
+
+    .hero-card-tag {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .hero-card-name {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* floating badge */
+    .hero-badge {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 88px; height: 88px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    /* ─── STATS STRIP ───────────────────────────────── */
+    .stats-strip {
+      background: var(--charcoal);
+      border-bottom: 1px solid rgba(196,145,58,.12);
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      divide: x;
+    }
+
+    .stat-item {
+      padding: 32px 20px;
+      text-align: center;
+      border-right: 1px solid rgba(196,145,58,.1);
+    }
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-light);
+    }
+
+    /* ─── SECTION WRAPPER ───────────────────────────── */
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+
+    .section-header { margin-bottom: 56px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .subheading { margin-left: auto; margin-right: auto; max-width: 560px; }
+
+    /* ─── NOSOTROS ──────────────────────────────────── */
+    #nosotros { background: var(--off-white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .about-img {
+      background: var(--cream);
+      border: 1px solid rgba(196,145,58,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--gray-light);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .about-img .icon { font-size: 2rem; opacity: .35; }
+
+    .about-img-main {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/7;
+    }
+
+    .about-img-sm { aspect-ratio: 1; }
+
+    .about-text p {
+      font-size: 15px;
+      color: var(--gray-mid);
+      margin-bottom: 18px;
+    }
+
+    .about-text strong { color: var(--ink); font-weight: 600; }
+
+    .about-quote {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+      margin: 28px 0;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* ─── CATEGORÍAS ────────────────────────────────── */
+    #categorias { background: var(--ink); }
+
+    #categorias .heading { color: var(--white); }
+    #categorias .subheading { color: rgba(255,255,255,.45); }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+
+    .cat-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(196,145,58,.08);
+      padding: 44px 28px 36px;
+      transition: border-color .25s, transform .25s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform .25s ease;
+      transform-origin: left;
+    }
+
+    .cat-card:hover { border-color: rgba(196,145,58,.3); transform: translateY(-4px); }
+    .cat-card:hover::before { transform: scaleX(1); }
+
+    .cat-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(196,145,58,.12);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .cat-icon-wrap {
+      width: 52px; height: 52px;
+      border: 1px solid rgba(196,145,58,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cat-name {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .cat-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,.4);
+      line-height: 1.7;
+    }
+
+    /* ─── VALORES ───────────────────────────────────── */
+    #valores { background: var(--cream); }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .valor {
+      background: var(--off-white);
+      padding: 36px 24px;
+      border: 1px solid rgba(196,145,58,.1);
+      position: relative;
+    }
+
+    .valor::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 24px;
+      width: 32px; height: 2px;
+      background: var(--gold);
+    }
+
+    .valor-icon { font-size: 1.6rem; margin-bottom: 18px; }
+
+    .valor-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .valor-text { font-size: 13px; color: var(--gray-mid); line-height: 1.7; }
+
+    /* ─── SUCURSALES ─────────────────────────────────── */
+    #sucursales { background: var(--charcoal); }
+
+    #sucursales .heading { color: var(--white); }
+    #sucursales .subheading { color: rgba(255,255,255,.4); }
+    #sucursales .label { color: var(--gold); }
+
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .store-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(196,145,58,.12);
+      padding: 36px 28px;
+      position: relative;
+      transition: border-color .25s;
+    }
+
+    .store-card:hover { border-color: rgba(196,145,58,.35); }
+
+    .store-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: rgba(196,145,58,.12);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .store-name {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .store-mall {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .store-detail {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .store-detail-icon {
+      width: 18px;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: .9rem;
+      margin-top: 1px;
+    }
+
+    .store-detail-text {
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.5;
+    }
+
+    .store-hours {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .store-hours-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .store-hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 4px;
+    }
+
+    .store-hours-row span:last-child { color: rgba(255,255,255,.6); }
+
+    /* ─── CONTACTO ──────────────────────────────────── */
+    #contacto { background: var(--off-white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      margin-bottom: 28px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      width: 44px; height: 44px;
+      border: 1px solid rgba(196,145,58,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      color: var(--gold);
+    }
+
+    .contact-info-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      margin-bottom: 4px;
+    }
+
+    .contact-info-value {
+      font-size: 14px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .contact-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: 1px solid rgba(196,145,58,.2);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: all .2s;
+    }
+
+    .social-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(196,145,58,.04); }
+
+    /* Form */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .form-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px 16px;
+      border: 1px solid rgba(196,145,58,.2);
+      background: var(--white);
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .2s;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--gold); }
+
+    .form-group textarea { min-height: 110px; resize: vertical; }
+
+    .form-msg {
+      display: none;
+      font-size: 12px;
+      color: var(--gold);
+      padding: 12px 16px;
+      border: 1px solid rgba(196,145,58,.3);
+      background: rgba(196,145,58,.05);
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    footer { background: var(--ink); }
+
+    .footer-main {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand-logo img {
+      height: 42px;
+      width: auto;
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      color: rgba(255,255,255,.4);
+      font-size: .9rem;
+      margin-bottom: 24px;
+    }
+
+    .footer-col-title {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li { margin-bottom: 10px; }
+
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      transition: color .2s;
+    }
+
+    .footer-col ul a:hover { color: var(--gold); }
+
+    .footer-address {
+      font-size: 12px;
+      color: rgba(255,255,255,.35);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .footer-address strong { color: rgba(255,255,255,.6); font-weight: 500; }
+
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+
+    .footer-social a {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      color: rgba(255,255,255,.4);
+      transition: all .2s;
+    }
+
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+
+    .footer-bottom {
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,.25);
+      letter-spacing: .5px;
+    }
+
+    .footer-copy span { color: var(--gold); }
+
+    /* ─── DIVIDER ─────────────────────────────────────── */
+    .gold-divider {
+      width: 40px; height: 1px;
+      background: var(--gold);
+      margin-top: 20px;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .valores-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+
+      .container { padding: 0 20px; }
+
+      nav .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h); left: 0; right: 0;
+        background: var(--charcoal);
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(196,145,58,.15);
+      }
+
+      nav .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+
+      .hero-grid { grid-template-columns: 1fr; padding: 60px 0; }
+      .hero-visual { display: none; }
+
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual-grid { display: none; }
+
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+
+      .valores-grid { grid-template-columns: 1fr 1fr; }
+
+      .stores-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .section { padding: 64px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .cat-grid { grid-template-columns: 1fr; }
+      .valores-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    3 Sucursales en Bogotá
+    <span>·</span>
+    Centro Mayor &nbsp;|&nbsp; Portal 80 &nbsp;|&nbsp; Salitre Plaza
+    <span>·</span>
+    Lun–Sáb 10:30–19:30
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo"><img src="assets/Ariztor White.png" alt="Almacenes Ariztor" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#categorias">Colección</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#sucursales">Sucursales</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Bogotá, Colombia · Desde 1982</p>
+          <h1 class="hero-title">
+            ARIZ<span class="gold">TOR</span>
+          </h1>
+          <p class="hero-sub">
+            Elegancia, exclusividad y distinción<br />
+            en ropa y accesorios para el hombre.
+          </p>
+          <div class="hero-cta">
+            <a href="#categorias" class="btn btn-gold">Ver Colección</a>
+            <a href="#sucursales" class="btn btn-ghost">Nuestras Tiendas</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-img"><img src="assets/Ariztor W shade.png" alt="" style="width:75%;opacity:.18;" /></div>
+            <div class="hero-card-content">
+              <p class="hero-card-tag">Colección Ejecutiva</p>
+              <p class="hero-card-name">Elegancia a tu medida</p>
+            </div>
+            <div class="hero-badge">
+              Nueva<br/>Colección<br/>2026
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <p class="stat-num">43</p>
+          <p class="stat-label">Años de experiencia</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-num">3</p>
+          <p class="stat-label">Sucursales en Bogotá</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-num">100%</p>
+          <p class="stat-label">Hecho para el hombre</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-num">🇨🇴</p>
+          <p class="stat-label">Orgullo colombiano</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="about-visual-grid">
+            <div class="about-img about-img-main">
+              <img src="assets/Ariztor B shade.png" alt="Almacenes Ariztor" style="width:65%;opacity:.55;" />
+            </div>
+            <div class="about-img about-img-sm">
+              <span class="icon">👔</span>
+              <span>Ejecutivo</span>
+            </div>
+            <div class="about-img about-img-sm">
+              <span class="icon">✂️</span>
+              <span>Sastrería</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="label">Quiénes somos</span>
+          <h2 class="heading">Desde 1982 vistiendo<br />al hombre bogotano</h2>
+          <div class="gold-divider" style="margin: 22px 0 28px;"></div>
+          <p>
+            <strong>Almacenes Ariztor</strong> es una empresa colombiana especializada en
+            ropa y accesorios para hombre. Nacimos con la misión de ofrecer a cada cliente
+            lo mejor en <strong>elegancia, exclusividad y distinción</strong>.
+          </p>
+          <blockquote class="about-quote">
+            "Vestir bien no es vanidad — es respeto propio y presencia ante el mundo."
+          </blockquote>
+          <p>
+            Contamos con tres puntos de venta en los centros comerciales más importantes
+            de Bogotá, donde nuestro equipo te guía para encontrar el look perfecto,
+            desde la camisa de oficina hasta el traje de la ocasión especial.
+          </p>
+          <br />
+          <a href="#sucursales" class="btn btn-ghost-dark">Visítanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section id="categorias" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="label">Lo que encontrarás</span>
+        <h2 class="heading" style="color:var(--white)">Nuestra Colección</h2>
+        <p class="subheading">Prendas cuidadosamente seleccionadas para el hombre que sabe lo que quiere.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-num">01</div>
+          <div class="cat-icon-wrap">👔</div>
+          <p class="cat-name">Camisas Ejecutivas</p>
+          <p class="cat-desc">Diseños formales y semiformales para la oficina y los momentos que importan. Corte impecable, tela de calidad.</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-num">02</div>
+          <div class="cat-icon-wrap">🕴</div>
+          <p class="cat-name">Trajes & Sacos</p>
+          <p class="cat-desc">Colecciones de trajes, blazers y sacos que transmiten autoridad y clase en cada reunión.</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-num">03</div>
+          <div class="cat-icon-wrap">👖</div>
+          <p class="cat-name">Pantalones</p>
+          <p class="cat-desc">Desde el pantalón de paño clásico hasta el chino contemporáneo — siempre con el ajuste perfecto.</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-num">04</div>
+          <div class="cat-icon-wrap">👜</div>
+          <p class="cat-name">Accesorios</p>
+          <p class="cat-desc">Corbatas, cinturones, billeteras y más. Los detalles que completan una imagen de distinción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section id="valores" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="label">Por qué elegirnos</span>
+        <h2 class="heading">Nuestro Compromiso</h2>
+        <p class="subheading">Cuatro pilares que guían cada prenda que ponemos en nuestras tiendas.</p>
+      </div>
+      <div class="valores-grid">
+        <div class="valor">
+          <div class="valor-icon">🏅</div>
+          <p class="valor-title">Calidad Superior</p>
+          <p class="valor-text">Seleccionamos cada pieza con exigencia para garantizar que luzca y dure como mereces.</p>
+        </div>
+        <div class="valor">
+          <div class="valor-icon">💎</div>
+          <p class="valor-title">Exclusividad</p>
+          <p class="valor-text">Estilos diferenciados que te distinguen en cualquier entorno, sin perder la sobriedad del buen gusto.</p>
+        </div>
+        <div class="valor">
+          <div class="valor-icon">🤝</div>
+          <p class="valor-title">Asesoría Personalizada</p>
+          <p class="valor-text">Nuestro equipo te acompaña para encontrar el look que mejor refleja tu personalidad y estilo de vida.</p>
+        </div>
+        <div class="valor">
+          <div class="valor-icon">🇨🇴</div>
+          <p class="valor-title">Orgullo Colombiano</p>
+          <p class="valor-text">Empresa bogotana que apoya el talento local y lleva la elegancia colombiana al siguiente nivel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCURSALES -->
+  <section id="sucursales" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="label">Encuéntranos</span>
+        <h2 class="heading" style="color:var(--white)">Nuestras Sucursales</h2>
+        <p class="subheading" style="color:rgba(255,255,255,.4)">Tres puntos de venta en los mejores centros comerciales de Bogotá.</p>
+      </div>
+
+      <div class="stores-grid">
+        <!-- CENTRO MAYOR -->
+        <div class="store-card">
+          <p class="store-num">01</p>
+          <p class="store-name">Ariztor Centro Mayor</p>
+          <p class="store-mall">Centro Mayor · Piso 2</p>
+          <div class="store-detail">
+            <span class="store-detail-icon">📍</span>
+            <span class="store-detail-text">Locales 2-082 / 2-083 · Centro Comercial Centro Mayor · Bogotá D.C.</span>
+          </div>
+          <div class="store-detail">
+            <span class="store-detail-icon">📞</span>
+            <span class="store-detail-text">(601) 734-2604</span>
+          </div>
+          <div class="store-hours">
+            <p class="store-hours-label">Horario</p>
+            <div class="store-hours-row"><span>Lunes – Sábado</span><span>10:30 – 19:30</span></div>
+            <div class="store-hours-row"><span>Domingos y Festivos</span><span>10:30 – 18:30</span></div>
+          </div>
+        </div>
+
+        <!-- PORTAL 80 -->
+        <div class="store-card">
+          <p class="store-num">02</p>
+          <p class="store-name">Ariztor Portal 80</p>
+          <p class="store-mall">C.C. Portal 80 · Engativá</p>
+          <div class="store-detail">
+            <span class="store-detail-icon">📍</span>
+            <span class="store-detail-text">Local N2-124 · Av. Calle 80 #80a entre Cra. 102 y Tv. 94 · Engativá, Bogotá</span>
+          </div>
+          <div class="store-detail">
+            <span class="store-detail-icon">📞</span>
+            <span class="store-detail-text">(601) 490-2713</span>
+          </div>
+          <div class="store-hours">
+            <p class="store-hours-label">Horario</p>
+            <div class="store-hours-row"><span>Lunes – Sábado</span><span>10:30 – 19:30</span></div>
+            <div class="store-hours-row"><span>Domingos y Festivos</span><span>10:30 – 18:30</span></div>
+          </div>
+        </div>
+
+        <!-- SALITRE PLAZA -->
+        <div class="store-card">
+          <p class="store-num">03</p>
+          <p class="store-name">Ariztor Salitre Plaza</p>
+          <p class="store-mall">C.C. Salitre Plaza · Fontibón</p>
+          <div class="store-detail">
+            <span class="store-detail-icon">📍</span>
+            <span class="store-detail-text">Local 279 · Centro Comercial Salitre Plaza · Ciudad Salitre Occidental, Bogotá</span>
+          </div>
+          <div class="store-detail">
+            <span class="store-detail-icon">📞</span>
+            <span class="store-detail-text">(601) 416-9240</span>
+          </div>
+          <div class="store-hours">
+            <p class="store-hours-label">Horario</p>
+            <div class="store-hours-row"><span>Lunes – Sábado</span><span>10:30 – 19:30</span></div>
+            <div class="store-hours-row"><span>Domingos y Festivos</span><span>10:30 – 18:30</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="label">Hablemos</span>
+          <h2 class="heading">Contáctanos</h2>
+          <div class="gold-divider" style="margin: 22px 0 32px;"></div>
+
+          <div class="contact-info-block">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p class="contact-info-label">Oficina Principal</p>
+              <p class="contact-info-value">Calle 12 # 13-23 Of. 203 · Bogotá D.C.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-icon">📞</div>
+            <div>
+              <p class="contact-info-label">Teléfono</p>
+              <p class="contact-info-value">(601) 284-3483</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-icon">📧</div>
+            <div>
+              <p class="contact-info-label">Correo</p>
+              <p class="contact-info-value">hectorariza1@outlook.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <p class="contact-info-label">Atención</p>
+              <p class="contact-info-value">Lunes – Sábado · 10:30 – 19:30</p>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://www.instagram.com/ariztor" target="_blank" rel="noopener" class="social-btn">📷 Instagram</a>
+            <a href="https://www.facebook.com/ariztor/" target="_blank" rel="noopener" class="social-btn">👤 Facebook</a>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Nombre</label>
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Teléfono / WhatsApp</label>
+              <input type="tel" name="telefono" placeholder="Ej. 310 000 0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Correo electrónico</label>
+            <input type="email" name="email" placeholder="Tu correo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Sucursal de interés</label>
+            <select name="sucursal">
+              <option value="">Selecciona una tienda...</option>
+              <option>Centro Mayor</option>
+              <option>Portal 80 (Engativá)</option>
+              <option>Salitre Plaza (Fontibón)</option>
+              <option>Oficina principal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mensaje</label>
+            <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="align-self:flex-start">Enviar Mensaje</button>
+          <div class="form-msg" id="formMsg">
+            ¡Gracias por escribirnos! Nos pondremos en contacto contigo pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-logo"><img src="assets/Ariztor White.png" alt="Almacenes Ariztor" /></div>
+            <p class="footer-tagline">Elegancia, exclusividad y distinción.</p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/ariztor" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+              <a href="https://www.facebook.com/ariztor/" target="_blank" rel="noopener" aria-label="Facebook">👤</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Colección</p>
+            <ul>
+              <li><a href="#categorias">Camisas Ejecutivas</a></li>
+              <li><a href="#categorias">Trajes & Sacos</a></li>
+              <li><a href="#categorias">Pantalones</a></li>
+              <li><a href="#categorias">Accesorios</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Empresa</p>
+            <ul>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#valores">Valores</a></li>
+              <li><a href="#sucursales">Sucursales</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Sucursales</p>
+            <p class="footer-address"><strong>Centro Mayor</strong><br />Piso 2, Loc. 2-082/2-083</p>
+            <p class="footer-address"><strong>Portal 80 · Engativá</strong><br />Local N2-124</p>
+            <p class="footer-address"><strong>Salitre Plaza · Fontibón</strong><br />Local 279</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 <span>Almacenes Ariztor Ltda.</span> · Todos los derechos reservados · Bogotá, Colombia</p>
+        <p class="footer-copy">Diseñado con orgullo <span>🇨🇴</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Mobile nav ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks   = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // ── Form submit ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const msg = document.getElementById('formMsg');
+      msg.style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { msg.style.display = 'none'; }, 6000);
+    }
+
+    // ── Nav active on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.nav-links a');
+
+    function setActive() {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      links.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+      });
+    }
+
+    window.addEventListener('scroll', setActive, { passive: true });
+  </script>
+</body>
+</html>
