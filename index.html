@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Almacenes Ariztor — Ropa y accesorios para hombre en Bogotá. Camisas, trajes, sacos y pantalones con elegancia y distinción desde 1982. 6 sucursales: Venecia, Kennedy, Fontibón, Salitre Plaza, Portal 80 y Centro Mayor." />
+  <meta name="description" content="Almacenes Ariztor — Ropa casual y formal para el hombre colombiano desde 1982. Calidad real, precio justo. Marcas como VO5, PatPrimo, Punto Blanco, GEF, Kosta Azul y más. 6 sucursales en Bogotá." />
   <meta name="keywords" content="ropa hombre Bogotá, almacenes Ariztor, trajes hombre Bogotá, camisas ejecutivas, moda masculina Colombia, tienda ropa hombre, Ariztor Venecia, Ariztor Kennedy, Ariztor Fontibón" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.ariztor.com.co/" />
@@ -660,6 +660,51 @@
     #sucursales .subheading { color: rgba(255,255,255,.4); }
     #sucursales .label { color: var(--gold); }
 
+    /* ─── MARCAS ────────────────────────────────────── */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .brand-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(28,62,138,.15);
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      transition: border-color .25s, transform .25s;
+      cursor: pointer;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .brand-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+
+    .brand-name sup { font-size: .85rem; }
+
+    .brand-cat {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
     /* Gallery */
     .gallery-grid {
       display: grid;
@@ -1123,6 +1168,7 @@
       .valores-grid { grid-template-columns: 1fr 1fr; }
 
       .stores-grid { grid-template-columns: 1fr; }
+      .brands-grid { grid-template-columns: 1fr 1fr; }
       .gallery-grid { grid-template-columns: 1fr 1fr; }
       .gallery-item--large { grid-column: span 2; grid-row: span 1; min-height: 240px; }
 
@@ -1161,7 +1207,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#categorias">Colección</a></li>
-        <li><a href="#galeria">Tiendas</a></li>
+        <li><a href="#marcas">Marcas</a></li>
         <li><a href="#sucursales">Sucursales</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -1181,8 +1227,8 @@
             ARIZ<span class="gold">TOR</span>
           </h1>
           <p class="hero-sub">
-            Elegancia, exclusividad y distinción<br />
-            en ropa y accesorios para el hombre.
+            Ropa casual y formal para el hombre colombiano.<br />
+            Calidad real, precio justo — en los centros comerciales más concurridos de Bogotá.
           </p>
           <div class="hero-cta">
             <a href="#categorias" class="btn btn-gold">Ver Colección</a>
@@ -1194,8 +1240,8 @@
           <div class="hero-card">
             <div class="hero-card-img"><img src="assets/Ariztor W shade.png" alt="" style="width:75%;opacity:.18;" /></div>
             <div class="hero-card-content">
-              <p class="hero-card-tag">Colección Ejecutiva</p>
-              <p class="hero-card-name">Elegancia a tu medida</p>
+              <p class="hero-card-tag">Colección 2026</p>
+              <p class="hero-card-name">Casual y Formal — para cada ocasión</p>
             </div>
             <div class="hero-badge">
               Nueva<br/>Colección<br/>2026
@@ -1219,12 +1265,12 @@
           <p class="stat-label">Sucursales en Bogotá</p>
         </div>
         <div class="stat-item">
-          <p class="stat-num">100%</p>
-          <p class="stat-label">Hecho para el hombre</p>
+          <p class="stat-num">+10</p>
+          <p class="stat-label">Marcas aliadas</p>
         </div>
         <div class="stat-item">
           <p class="stat-num">🇨🇴</p>
-          <p class="stat-label">Orgullo colombiano</p>
+          <p class="stat-label">Marca colombiana</p>
         </div>
       </div>
     </div>
@@ -1254,17 +1300,19 @@
           <h2 class="heading">Desde 1982 vistiendo<br />al hombre bogotano</h2>
           <div class="gold-divider" style="margin: 22px 0 28px;"></div>
           <p>
-            <strong>Almacenes Ariztor</strong> es una empresa colombiana especializada en
-            ropa y accesorios para hombre. Nacimos con la misión de ofrecer a cada cliente
-            lo mejor en <strong>elegancia, exclusividad y distinción</strong>.
+            <strong>Almacenes Ariztor</strong> es una empresa colombiana con más de 43 años
+            vistiendo al hombre bogotano. Nacimos con una misión clara: ofrecer
+            <strong>ropa de calidad a un precio justo</strong>, tanto para el día a día
+            como para las ocasiones especiales.
           </p>
           <blockquote class="about-quote">
-            "Vestir bien no es vanidad — es respeto propio y presencia ante el mundo."
+            "Vestir bien no tiene que costar una fortuna — en Ariztor encuentras calidad real para cada ocasión."
           </blockquote>
           <p>
-            Contamos con seis puntos de venta en los barrios más importantes
-            de Bogotá, donde nuestro equipo te guía para encontrar el look perfecto,
-            desde la camisa de oficina hasta el traje de la ocasión especial.
+            Manejamos nuestra <strong>propia marca Ariztor</strong> y somos distribuidores
+            de las mejores marcas colombianas de moda masculina. Contamos con
+            <strong>seis puntos de venta en los centros comerciales más concurridos de Bogotá</strong>,
+            con colecciones casuales, formales y de temporada para el hombre moderno y clásico.
           </p>
           <br />
           <a href="#sucursales" class="btn btn-ghost-dark">Visítanos</a>
@@ -1279,32 +1327,32 @@
       <div class="section-header center">
         <span class="label">Lo que encontrarás</span>
         <h2 class="heading" style="color:var(--white)">Nuestra Colección</h2>
-        <p class="subheading">Prendas cuidadosamente seleccionadas para el hombre que sabe lo que quiere.</p>
+        <p class="subheading">Ropa casual y formal, elegante y clásica — para cada momento de tu vida.</p>
       </div>
       <div class="cat-grid">
         <div class="cat-card">
           <div class="cat-num">01</div>
-          <div class="cat-icon-wrap">👔</div>
-          <p class="cat-name">Camisas Ejecutivas</p>
-          <p class="cat-desc">Diseños formales y semiformales para la oficina y los momentos que importan. Corte impecable, tela de calidad.</p>
+          <div class="cat-icon-wrap">👕</div>
+          <p class="cat-name">Ropa Casual</p>
+          <p class="cat-desc">Camisetas, polos, camisas casuales y chaquetas para el día a día. Comodidad y estilo sin sacrificar calidad.</p>
         </div>
         <div class="cat-card">
           <div class="cat-num">02</div>
           <div class="cat-icon-wrap">🕴</div>
-          <p class="cat-name">Trajes & Sacos</p>
-          <p class="cat-desc">Colecciones de trajes, blazers y sacos que transmiten autoridad y clase en cada reunión.</p>
+          <p class="cat-name">Ropa Formal</p>
+          <p class="cat-desc">Camisas de vestir, trajes, sacos y blazers para la oficina y las ocasiones especiales. Corte clásico y elegante.</p>
         </div>
         <div class="cat-card">
           <div class="cat-num">03</div>
           <div class="cat-icon-wrap">👖</div>
           <p class="cat-name">Pantalones</p>
-          <p class="cat-desc">Desde el pantalón de paño clásico hasta el chino contemporáneo — siempre con el ajuste perfecto.</p>
+          <p class="cat-desc">Desde el jean casual hasta el pantalón de paño clásico. Amplia variedad de cortes y telas para todos los estilos.</p>
         </div>
         <div class="cat-card">
           <div class="cat-num">04</div>
-          <div class="cat-icon-wrap">👜</div>
-          <p class="cat-name">Accesorios</p>
-          <p class="cat-desc">Corbatas, cinturones, billeteras y más. Los detalles que completan una imagen de distinción.</p>
+          <div class="cat-icon-wrap">🧦</div>
+          <p class="cat-name">Ropa Interior & Básicos</p>
+          <p class="cat-desc">Ropa interior, medias y básicos de las mejores marcas colombianas. Calidad que se siente desde adentro.</p>
         </div>
       </div>
     </div>
@@ -1316,29 +1364,66 @@
       <div class="section-header center">
         <span class="label">Por qué elegirnos</span>
         <h2 class="heading">Nuestro Compromiso</h2>
-        <p class="subheading">Cuatro pilares que guían cada prenda que ponemos en nuestras tiendas.</p>
+        <p class="subheading">Lo que nos ha mantenido vistiendo al hombre bogotano por más de 43 años.</p>
       </div>
       <div class="valores-grid">
         <div class="valor">
           <div class="valor-icon">🏅</div>
-          <p class="valor-title">Calidad Superior</p>
-          <p class="valor-text">Seleccionamos cada pieza con exigencia para garantizar que luzca y dure como mereces.</p>
+          <p class="valor-title">Calidad Garantizada</p>
+          <p class="valor-text">Trabajamos con marcas reconocidas y nuestra propia línea Ariztor para ofrecerte prendas que lucen bien y duran.</p>
         </div>
         <div class="valor">
-          <div class="valor-icon">💎</div>
-          <p class="valor-title">Exclusividad</p>
-          <p class="valor-text">Estilos diferenciados que te distinguen en cualquier entorno, sin perder la sobriedad del buen gusto.</p>
+          <div class="valor-icon">💰</div>
+          <p class="valor-title">Precio Justo</p>
+          <p class="valor-text">Calidad no significa costoso. En Ariztor encuentras la mejor relación calidad-precio del mercado bogotano.</p>
         </div>
         <div class="valor">
           <div class="valor-icon">🤝</div>
-          <p class="valor-title">Asesoría Personalizada</p>
-          <p class="valor-text">Nuestro equipo te acompaña para encontrar el look que mejor refleja tu personalidad y estilo de vida.</p>
+          <p class="valor-title">Atención Personalizada</p>
+          <p class="valor-text">Nuestro equipo te orienta para encontrar la prenda ideal, ya sea para el trabajo, el fin de semana o una ocasión especial.</p>
         </div>
         <div class="valor">
           <div class="valor-icon">🇨🇴</div>
-          <p class="valor-title">Orgullo Colombiano</p>
-          <p class="valor-text">Empresa bogotana que apoya el talento local y lleva la elegancia colombiana al siguiente nivel.</p>
+          <p class="valor-title">Marca Colombiana</p>
+          <p class="valor-text">Empresa bogotana fundada en 1982, con presencia en los centros comerciales más visitados de la ciudad.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section id="marcas" class="section" style="background:var(--ink);">
+    <div class="container">
+      <div class="section-header center">
+        <span class="label">Nuestras Marcas</span>
+        <h2 class="heading" style="color:var(--white)">Marca Propia y Aliados</h2>
+        <p class="subheading" style="color:rgba(255,255,255,.45)">Distribuimos las marcas más reconocidas de moda masculina colombiana, además de nuestra propia línea Ariztor.</p>
+      </div>
+      <div class="brands-grid">
+        <a href="https://www.vo5.co/" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">VO<sup>5</sup></span>
+          <span class="brand-cat">Ropa Casual & Formal</span>
+        </a>
+        <a href="https://www.puntoblanco.co" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">Punto Blanco</span>
+          <span class="brand-cat">Ropa Interior & Básicos</span>
+        </a>
+        <a href="https://www.gef.co" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">GEF</span>
+          <span class="brand-cat">Ropa Interior & Calcetines</span>
+        </a>
+        <a href="https://unico-underwear.com/" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">Único</span>
+          <span class="brand-cat">Ropa Interior Masculina</span>
+        </a>
+        <a href="https://www.kostazul.com" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">Kosta Azul</span>
+          <span class="brand-cat">Moda Masculina</span>
+        </a>
+        <a href="https://www.patprimo.com" target="_blank" rel="noopener" class="brand-card">
+          <span class="brand-name">PatPrimo</span>
+          <span class="brand-cat">Ropa Casual & Formal</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1380,7 +1465,7 @@
       <div class="section-header center">
         <span class="label">Encuéntranos</span>
         <h2 class="heading" style="color:var(--white)">Nuestras Sucursales</h2>
-        <p class="subheading" style="color:rgba(255,255,255,.4)">Seis puntos de venta en los mejores barrios de Bogotá.</p>
+        <p class="subheading" style="color:rgba(255,255,255,.4)">Presentes en los centros comerciales más concurridos de Bogotá.</p>
       </div>
 
       <div class="stores-grid">
