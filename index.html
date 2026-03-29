@@ -98,17 +98,17 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Brand palette — executive dark + warm gold */
-      --ink:        #151210;
-      --charcoal:   #1E1B17;
-      --warm-dark:  #2A2420;
-      --gold:       #C4913A;
-      --gold-light: #D4A84B;
-      --gold-pale:  #F0DEB4;
-      --cream:      #F5F1EB;
-      --off-white:  #FAF8F5;
-      --gray-mid:   #6B6259;
-      --gray-light: #C9C3BB;
+      /* Brand palette — black, white & navy blue */
+      --ink:        #0D0D0D;
+      --charcoal:   #141414;
+      --warm-dark:  #1A1A1A;
+      --gold:       #1C3E8A;
+      --gold-light: #2756B3;
+      --gold-pale:  #D4E1F7;
+      --cream:      #F0F4FB;
+      --off-white:  #F7F7F7;
+      --gray-mid:   #606060;
+      --gray-light: #BBBBBB;
       --white:      #FFFFFF;
 
       --serif:  'Cormorant Garamond', Georgia, serif;
@@ -224,7 +224,7 @@
       background: var(--charcoal);
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(196,145,58,.18);
+      border-bottom: 1px solid rgba(28,62,138,.18);
     }
 
     .nav-inner {
@@ -308,7 +308,7 @@
       position: absolute;
       top: -80px; right: -80px;
       width: 600px; height: 600px;
-      border: 1px solid rgba(196,145,58,.08);
+      border: 1px solid rgba(28,62,138,.08);
       border-radius: 50%;
     }
     #inicio::after {
@@ -316,7 +316,7 @@
       position: absolute;
       bottom: -120px; left: -120px;
       width: 500px; height: 500px;
-      border: 1px solid rgba(196,145,58,.06);
+      border: 1px solid rgba(28,62,138,.06);
       border-radius: 50%;
     }
 
@@ -382,7 +382,7 @@
 
     .hero-card {
       background: var(--warm-dark);
-      border: 1px solid rgba(196,145,58,.15);
+      border: 1px solid rgba(28,62,138,.15);
       aspect-ratio: 3/4;
       display: flex;
       flex-direction: column;
@@ -451,7 +451,7 @@
     /* ─── STATS STRIP ───────────────────────────────── */
     .stats-strip {
       background: var(--charcoal);
-      border-bottom: 1px solid rgba(196,145,58,.12);
+      border-bottom: 1px solid rgba(28,62,138,.12);
     }
 
     .stats-inner {
@@ -463,7 +463,7 @@
     .stat-item {
       padding: 32px 20px;
       text-align: center;
-      border-right: 1px solid rgba(196,145,58,.1);
+      border-right: 1px solid rgba(28,62,138,.1);
     }
     .stat-item:last-child { border-right: none; }
 
@@ -509,7 +509,7 @@
 
     .about-img {
       background: var(--cream);
-      border: 1px solid rgba(196,145,58,.15);
+      border: 1px solid rgba(28,62,138,.15);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -563,7 +563,7 @@
 
     .cat-card {
       background: var(--warm-dark);
-      border: 1px solid rgba(196,145,58,.08);
+      border: 1px solid rgba(28,62,138,.08);
       padding: 44px 28px 36px;
       transition: border-color .25s, transform .25s;
       cursor: default;
@@ -582,21 +582,21 @@
       transform-origin: left;
     }
 
-    .cat-card:hover { border-color: rgba(196,145,58,.3); transform: translateY(-4px); }
+    .cat-card:hover { border-color: rgba(28,62,138,.3); transform: translateY(-4px); }
     .cat-card:hover::before { transform: scaleX(1); }
 
     .cat-num {
       font-family: var(--serif);
       font-size: 3rem;
       font-weight: 700;
-      color: rgba(196,145,58,.12);
+      color: rgba(28,62,138,.12);
       line-height: 1;
       margin-bottom: 16px;
     }
 
     .cat-icon-wrap {
       width: 52px; height: 52px;
-      border: 1px solid rgba(196,145,58,.2);
+      border: 1px solid rgba(28,62,138,.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -630,7 +630,7 @@
     .valor {
       background: var(--off-white);
       padding: 36px 24px;
-      border: 1px solid rgba(196,145,58,.1);
+      border: 1px solid rgba(28,62,138,.1);
       position: relative;
     }
 
@@ -683,19 +683,19 @@
 
     .store-card {
       background: var(--warm-dark);
-      border: 1px solid rgba(196,145,58,.12);
+      border: 1px solid rgba(28,62,138,.12);
       padding: 36px 28px;
       position: relative;
       transition: border-color .25s;
     }
 
-    .store-card:hover { border-color: rgba(196,145,58,.35); }
+    .store-card:hover { border-color: rgba(28,62,138,.35); }
 
     .store-num {
       font-family: var(--serif);
       font-size: 2.8rem;
       font-weight: 700;
-      color: rgba(196,145,58,.12);
+      color: rgba(28,62,138,.12);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -779,7 +779,7 @@
 
     .contact-icon {
       width: 44px; height: 44px;
-      border: 1px solid rgba(196,145,58,.25);
+      border: 1px solid rgba(28,62,138,.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -813,7 +813,7 @@
       align-items: center;
       gap: 8px;
       padding: 10px 18px;
-      border: 1px solid rgba(196,145,58,.2);
+      border: 1px solid rgba(28,62,138,.2);
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -821,7 +821,7 @@
       transition: all .2s;
     }
 
-    .social-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(196,145,58,.04); }
+    .social-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(28,62,138,.04); }
 
     /* Form */
     .contact-form { display: flex; flex-direction: column; gap: 16px; }
@@ -841,7 +841,7 @@
     .form-group textarea,
     .form-group select {
       padding: 12px 16px;
-      border: 1px solid rgba(196,145,58,.2);
+      border: 1px solid rgba(28,62,138,.2);
       background: var(--white);
       font-family: var(--sans);
       font-size: 13px;
@@ -862,8 +862,8 @@
       font-size: 12px;
       color: var(--gold);
       padding: 12px 16px;
-      border: 1px solid rgba(196,145,58,.3);
-      background: rgba(196,145,58,.05);
+      border: 1px solid rgba(28,62,138,.3);
+      background: rgba(28,62,138,.05);
     }
 
     /* ─── FOOTER ─────────────────────────────────────── */
@@ -969,7 +969,7 @@
       position: relative;
       overflow: hidden;
       background: var(--cream);
-      border: 1px solid rgba(196,145,58,.12);
+      border: 1px solid rgba(28,62,138,.12);
     }
 
     .galeria-item img {
@@ -1041,7 +1041,7 @@
       align-items: center;
       gap: 10px;
       padding: 13px 28px;
-      border: 1px solid rgba(196,145,58,.25);
+      border: 1px solid rgba(28,62,138,.25);
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 2.5px;
@@ -1050,7 +1050,7 @@
       transition: all .2s;
     }
 
-    .social-follow-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(196,145,58,.04); }
+    .social-follow-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(28,62,138,.04); }
 
     /* store map link */
     .store-map-link {
@@ -1104,7 +1104,7 @@
         flex-direction: column;
         padding: 24px 20px;
         gap: 20px;
-        border-bottom: 1px solid rgba(196,145,58,.15);
+        border-bottom: 1px solid rgba(28,62,138,.15);
       }
 
       nav .nav-links.open { display: flex; }
@@ -1147,11 +1147,11 @@
 
   <!-- TOP BAR -->
   <div class="topbar">
-    3 Sucursales en Bogotá
+    6 Sucursales en Bogotá
     <span>·</span>
-    Centro Mayor &nbsp;|&nbsp; Portal 80 &nbsp;|&nbsp; Salitre Plaza
+    Venecia &nbsp;|&nbsp; Kennedy &nbsp;|&nbsp; Fontibón &nbsp;|&nbsp; Salitre Plaza &nbsp;|&nbsp; Portal 80 &nbsp;|&nbsp; Centro Mayor
     <span>·</span>
-    Lun–Sáb 10:30–19:30
+    Lun–Sáb 10:00–19:30
   </div>
 
   <!-- NAV -->
@@ -1563,10 +1563,12 @@
             <label class="form-label">Sucursal de interés</label>
             <select name="sucursal">
               <option value="">Selecciona una tienda...</option>
+              <option>Venecia (Sede Principal)</option>
+              <option>Kennedy</option>
+              <option>Fontibón</option>
+              <option>Salitre Plaza</option>
+              <option>Portal 80</option>
               <option>Centro Mayor</option>
-              <option>Portal 80 (Engativá)</option>
-              <option>Salitre Plaza (Fontibón)</option>
-              <option>Oficina principal</option>
             </select>
           </div>
           <div class="form-group">
