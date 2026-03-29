@@ -380,36 +380,34 @@
       position: relative;
     }
 
-    .hero-card {
-      background: var(--warm-dark);
-      border: 1px solid rgba(74,143,245,.15);
-      aspect-ratio: 3/4;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 30px;
+    .hero-img-wrap {
       position: relative;
+      aspect-ratio: 3/4;
       overflow: hidden;
+      border-radius: 2px;
     }
 
-    .hero-card::before {
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-img-wrap::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(21,18,16,.9) 30%, transparent 70%);
+      background: linear-gradient(to top, rgba(10,10,10,.75) 30%, transparent 70%);
+      z-index: 1;
     }
 
-    .hero-card-img {
+    .hero-img-caption {
       position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-      opacity: .08;
+      bottom: 28px;
+      left: 28px;
+      z-index: 2;
     }
-
-    .hero-card-content { position: relative; }
 
     .hero-card-tag {
       font-size: 9px;
@@ -1237,9 +1235,9 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-card">
-            <div class="hero-card-img"><img src="assets/Ariztor W shade.png" alt="" style="width:75%;opacity:.18;" /></div>
-            <div class="hero-card-content">
+          <div class="hero-img-wrap">
+            <img src="assets/shop-exterior.jpg" alt="Almacenes Ariztor — Tienda" />
+            <div class="hero-img-caption">
               <p class="hero-card-tag">Colección 2026</p>
               <p class="hero-card-name">Casual y Formal — para cada ocasión</p>
             </div>
